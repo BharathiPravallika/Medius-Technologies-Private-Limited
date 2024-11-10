@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'file_upload_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('file_upload_django'),
+        'USER': os.environ.get('file_upload_django_user'),
+        'PASSWORD': os.environ.get('2b2HbhRqPFY0JgZpj5H4BUdvzCO1omqC'),
+        'HOST': os.environ.get('dpg-cso8319u0jms739437mg-a'),
+        'PORT': '5432',
     }
 }
 
